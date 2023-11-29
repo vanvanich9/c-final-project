@@ -274,6 +274,7 @@ int check_available(char *field[8][8], int y, int x) {
 
 
 void save_game(int state, char *first_player_field[8][8], char *second_player_field[8][8], int *first_player_ships, int *second_player_ships) {
+    mkdir("saves", 0777);
     FILE *fptr;
     char dirname[64], savename[64];
     printf("Write player name: ");
